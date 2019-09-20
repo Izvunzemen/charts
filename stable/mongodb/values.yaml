@@ -145,7 +145,7 @@ service:
 #
 replicaSet:
   ## Whether to create a MongoDB replica set for high availability or not
-  enabled: false
+  enabled: true
   useHostnames: true
 
   ## Name of the replica set
@@ -198,7 +198,7 @@ resources:
    memory: 256Mi
 # Define separate resources per arbiter, which are less then primary or secondary
 # used only when replica set is enabled
-resourcesArbiter: {}
+resourcesArbiter:
  limits:
    cpu: 100m
    memory: 256Mi
